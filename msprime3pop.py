@@ -34,7 +34,7 @@ ts = msprime.sim_ancestry(sequence_length=100, samples={"pop1": 1, "pop2": 1, "G
 mts = msprime.sim_mutations(ts, rate=0.01, random_seed=5678)
 
 #Write a vcf file containing all the mutations simulated under the model above - example.vcf should now contain the variants
-with open("model1_replicate1.vcf","w") as vcf_file:
+with open("model5_replicate1.vcf","w") as vcf_file:
     mts.write_vcf(vcf_file,contig_id="0")
 
 #Prints the demography 
@@ -47,3 +47,6 @@ graph = msprime.Demography.to_demes(demography)
 fig, ax = plt.subplots()  # use plt.rcParams["figure.figsize"]
 demesdraw.tubes(graph, ax=ax, seed=1)
 plt.show() 
+
+
+
